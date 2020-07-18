@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #aaa;
+}
+
+/**
+*   日期样式
+*/
+
+.item-dateblock {
+    height: 25px;
+    line-height: 25px;
+}
+
+.item-dateblock .item-date {
+    font-size: 16px;
+    color: #bfbfbf;
+}
+
+.item-dateblock .item-date i {
+    margin-right: 5px;
+}
+
+.top-bg {
+    height: 700px;
+    min-width: 1200px;
+}
+
+.top-bg .img {
+    height: 700px;
+    width: 100%;
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    line-height: 700px;
+    color: white;
+    font-size: 100px;
+}
+
+.main-videos {
+    width: 100%;
+    height: 850px;
+    background-color: white;
+
+}
+
+.main-videos .video-containter {
+    width: 1200px;
+    height: 850px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.main-videos .video-containter .video-items {
+    width: 1240px;
+    height: 714px;
+}
+
+.main-videos .video-containter .video-item {
+    width: 274px;
+    height: 198px;
+    float: left;
+    margin: 40px 34px 0 0;
+}
+
+.main-videos .video-containter .video-item a {
+    width: 274px;
+    height: 154px;
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.video-items .video-item .video-desc{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.video-item-title .item-dateblock .item-dateIcon {
+    margin-left: 0px;
+}
+
+.video-items .video-item:hover div {
+    color: #11a5eb;
+}
+
+
+/**
+*  视频版块鼠标悬停特效
+*/
+.video-items .video-item .video-cover {
+    width: 274px;
+    height: 154px;
+    position: absolute;
+    z-index: 22;
+}
+
+.video-items .video-item .video-cover span {
+    display: block;
+    position: absolute;
+    z-index: 22;
+    width: 274px;
+    height: 154px;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+}
+
+.video-items .video-item a:hover .video-cover span {
+    background: rgba(50, 50, 50, .6) url("../img/play.png");
+}
+
+/* 到此结束 */
+
+/*分页样式*/
+.video-page {
+    margin: 0 auto;
+    text-align: center;
+    height: 136px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.video-page-item {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border: 1px #ddd solid;
+    border-radius: 5px;
+    text-align: center;
+    color: #222;
+    transition: 0.2s;
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+.active {
+    color: white;
+    background-color: #11a5eb;
+    border: 1px #11a5eb solid;
+}
+
+.video-page-item:hover {
+    color: white;
+    background-color: #11a5eb;
+    border: 1px #11a5eb solid;
+}

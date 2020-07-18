@@ -1,0 +1,141 @@
+/**
+    背景图片css
+*/
+.top-bg {
+    width: 100%;
+    height: 663px;
+}
+
+.top-bg .img {
+    width: 100%;
+    height: 663px;
+    background: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    line-height: 663px;
+    color: white;
+    font-size: 100px;
+}
+
+.main-news {
+    width: 100%;
+}
+
+.main-news .news-containter {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.news-items {
+    margin-top: 50px;
+}
+
+.news-items .news-item:last-child{
+    border-bottom: none;
+}
+
+.news-item {
+    overflow: hidden;
+    width: 1200px;
+    height: 150px;
+    border-bottom: 1px #aaa dashed;
+    list-style: none;
+}
+
+.news-item .news-item-date {
+    float: left;
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 100px;
+    height: 60px;
+}
+
+.news-item-date .date-monthDate {
+    color: black;
+    font-size: 24px;
+}
+
+.news-item-date .date-year {
+    font-size: 18px;
+    color: #666;
+}
+
+.news-item-date a {
+    display: block;
+    width: 100px;
+    height: 60px;
+}
+
+.news-item .news-item-containter {
+    width: 800px;
+    height: 140px;
+    float: left;
+    margin-top: 24px;
+    margin-left: 20px;
+}
+
+.news-item .news-item-containter .news-item-title {
+    display: block;
+    color: black;
+    font-size: 18px;
+    margin-bottom: 10px;
+    transition: .2s;
+
+}
+
+.news-item .news-item-containter .news-item-title:hover{
+    color: #11a5eb;
+}
+
+.news-item .news-item-containter p {
+    font-size: 14px;
+    color: #999;
+}
+
+.news-item .news-item-image{
+    margin-top: 24px;
+    margin-left: 20px;
+    float: left;
+}
+
+.news-item .news-item-image img{
+    width: 192px;
+    height: 108px;
+    float: left;
+}
+
+/*分页样式*/
+.news-page {
+    margin: 0 auto;
+    text-align: center;
+    height: 136px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.news-page-item {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    border: 1px #ddd solid;
+    border-radius: 5px;
+    text-align: center;
+    color: #222;
+    transition: 0.2s;
+    margin-right: 8px;
+    font-size: 13px;
+}
+
+.active {
+    color: white;
+    background-color: #11a5eb;
+    border: 1px #11a5eb solid;
+}
+
+.news-page-item:hover {
+    color: white;
+    background-color: #11a5eb;
+    border: 1px #11a5eb solid;
+}

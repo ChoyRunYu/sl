@@ -1,0 +1,265 @@
+/**
+*   @ header.css
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft Yahei;
+}
+
+body{
+    min-width: 1200px;
+    width: 100%;
+}
+
+img{
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-fixed{
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 1px 10px #888;
+    overflow: hidden;
+}
+
+.header-div{
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-shadow: 0px 1px 10px #888;
+}
+
+.header-content {
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    line-height: 80px;
+}
+
+.header-content .header-logo {
+    width: 182px;
+    height: 80px;
+    line-height: 80px;
+    margin-left: 18px;
+    display: inline-block;
+}
+
+.header-content .header-logo img {
+    width: 182px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.header-content .header-nav {
+    width: 1000px;
+    height: 80px;
+    float: right;
+}
+
+.header-content .header-nav .nav {
+    height: 80px;
+    float: right;
+}
+
+.header-content .header-nav .nav li {
+    height: 80px;
+    list-style: none;
+    float: left;
+    margin-right: 40px;
+}
+
+.header-content .header-nav .nav li a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 16px;
+    line-height: 80px;
+}
+
+.header-content .header-nav .nav li a:hover {
+    transition: .2s;
+    color: #11a5eb;
+
+}
+.nav-select{
+    color: #11a5eb;
+}
+
+/**
+*   @footer.css
+*
+*/
+.footer {
+    /*width: 100%;*/
+    height: 286px;
+    width: 100%;
+    background-color: #333;
+}
+
+.footer .footer-content {
+    width: 1200px;
+    height: 286px;
+    margin: 0 auto;
+}
+
+.footer .footer-content .footer-info {
+    height: 200px;
+    position: relative;
+}
+
+.footer-info .footer-info-mess {
+    height: 200px;
+    width: 600px;
+    padding-top: 40px;
+    padding-left: 50px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.footer-info .footer-info-mess p {
+    color: #ddd;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.footer-info .footer-info-mess .name {
+    font-size: 26px;
+}
+
+.footer-info .footer-info-mess p:nth-child(3) {
+    display: inline;
+}
+
+.footer-info .footer-info-mess a {
+    font-size: 17px;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-info .footer-info-mess a:hover {
+    color: #11a5eb;
+}
+
+.footer-info .footer-info-mess span {
+    color: #ddd;
+}
+
+.footer-info .footer-info-code {
+    /*height: 200px;*/
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+.footer-info .footer-info-code img {
+    display: block;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 8px;
+}
+
+.footer-info .footer-info-code .wechat {
+    width: 130px;
+    height: 19px;
+    margin: 0 auto;
+    line-height: 19px;
+}
+
+.footer-info .footer-info-code .wechat-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+    vertical-align: middle;
+    background-image: url("../img/wechat.png");
+}
+
+.footer-info .footer-info-code:hover .wechat .wechat-icon{
+    background-image: url("../img/wechatHover.png");
+}
+
+.footer-info .footer-info-code .wechat p {
+    font-size: 15px;
+    color: #ddd;
+    display: inline-block;
+}
+
+.footer hr {
+    height: 1px;
+    background-color: #ddd;
+    border: none;
+    margin: 0;
+}
+
+.footer-copyright {
+    padding-top: 15px;
+    font-size: 14px;
+    color: #ddd;
+    height: 70px;
+    text-align: center;
+}
+
+.footer-copyright a {
+    color: #ddd;
+    margin: 0 15px 5px 10px;
+    text-decoration: none;
+}
+
+.footer-copyright a:hover {
+    color: #11a5eb;
+    text-decoration: none;
+}
+
+.footer-copyright .copyright {
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/**
+ *  导航栏动画
+*/
+@-webkit-keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    animation-duration: 0.6s;
+  }

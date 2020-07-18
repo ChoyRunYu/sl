@@ -1,0 +1,99 @@
+.top-bg {
+    width: 100%;
+    height: 663px;
+}
+
+.top-bg .img {
+    width: 100%;
+    height: 663px;
+    background: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    line-height: 663px;
+    color: white;
+    font-size: 100px;
+}
+
+.main-about {
+    width: 100%;
+    /*height: 1500px;*/
+    height: 100%;
+}
+
+.aboutus-containter {
+    width: 1200px;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.aboutus-nav {
+    float: left;
+}
+
+.aboutus-nav ul {
+    width: 150px;
+    border-radius: 4px;
+    border: #ddd 1px solid;
+    box-shadow: 0px 0px 20px #ddd;
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: white;
+
+}
+
+.aboutus-nav ul>li {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    list-style: none;
+    border-top: #ddd 1px solid;
+}
+
+.aboutus-nav ul>li a {
+    width: 150px;
+    height: 50px;
+    display: block;
+    color: #222;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.aboutus-nav ul>li a:hover {
+    color: white;
+    background-color: #11a5eb;
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 90px;
+}
+
+.aboutus-content {
+    float: right;
+    width: 919px;
+    margin: 60px 15px 50px 50px;
+    box-sizing: border-box;
+}
+
+.aboutus-content h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.aboutus-content p {
+    text-indent: 2em;
+}
+
+.aboutus-content h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.scroll-active {
+    color: white;
+    background-color: #11a5eb;
+}

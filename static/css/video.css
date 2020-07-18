@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #11a5eb;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+.video-containter{
+    width: 1200px;
+    min-height: 700px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.video-containter .video{
+    width: 960px;
+    height: 540px;
+    margin: 0 auto;
+   /* margin: 40px auto;
+    margin-bottom: 80px;*/
+}
+.video-containter .video video{
+    width: 100%;
+    height: 100%;
+}
+
+.video-containter .video .video-desc{
+    font-size: 28px;
+    font-weight: 550px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+
+.video-mess span {
+    display: inline-block;
+    color: #999;
+    margin: 10px 15px 18px 10px;
+}
+
+.video-mess span>i{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+

@@ -1,0 +1,983 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+hr {
+    visibility: hidden;
+    background-color: #eee;
+    border: none;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../font/iconfont.woff2') format('woff2'),
+        url('../font/iconfont.woff') format('woff'),
+        url('../font/iconfont.ttf') format('truetype'),
+        url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #aaa;
+}
+
+/**
+    banner部分的标题块
+*/
+.title-containter {
+    position: absolute;
+    bottom: 70px;
+    z-index: 12000;
+    width: 100%;
+    height: 60px;
+
+}
+
+.title-containter .title-block {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    color: #e4e4e4;
+}
+
+.title-containter .title-block .title-div {
+    margin-left: 40px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: inline-block;
+}
+
+/*标题动画见动画部分，类名：title-animation*/
+
+
+/**
+* 新闻版块
+*/
+.main-news {
+    width: 100%;
+    height: 1030px;
+    background-color: #f4f4f4;
+}
+
+.main-news-containter {
+    height: 1030px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main-news-containter hr {
+    margin: 0;
+}
+
+.main-news-containter .news-title {
+    width: 1200px;
+    height: 136px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.main-news-containter .news-title div {
+    font-size: 40px;
+    display: inline-block;
+    color: #11a5eb;
+}
+
+.main-news-containter .news-title span {
+    display: inline-block;
+    font-size: 26px;
+    color: #a9a9a9;
+}
+
+.main-news-containter .news-title p {
+    color: #a9a9a9;
+}
+
+.main-news-containter .news-items {
+    width: 1200px;
+    height: 750px;
+}
+
+.news-items .news-item {
+    visibility: hidden;
+    width: 384px;
+    height: 290px;
+    background-color: white;
+    float: left;
+    margin: 68px 24px 0px 0;
+}
+
+.news-item:nth-of-type(3),
+.news-item:nth-of-type(6) {
+    margin-right: 0;
+}
+
+.news-items .news-item a {
+    transition: .3s;
+    display: inline-block;
+    width: 384px;
+    height: 290px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.news-items .news-item:nth-of-type(1),
+.news-items .news-item:nth-of-type(2),
+.news-items .news-item:nth-of-type(3) {
+    margin-top: 50px;
+}
+
+/**
+*   处理鼠标移入item时的图片放大特效
+*/
+.news-items .news-item .img-scale {
+    overflow: hidden;
+    width: 384px;
+    height: 216px;
+}
+
+.news-items .news-item a:hover {
+    /* transition: .5s;*/
+    box-shadow: 0px 4px 30px #aaa;
+}
+
+.news-items .news-item a:hover img {
+    transform: scale(1.2);
+    transition: all 0.8s
+}
+
+.news-items .news-item img {
+    transition: all 0.8s
+}
+
+/* 到此结束 */
+
+.news-items .news-item a:hover .news-item-title {
+    color: #11a5eb;
+}
+
+.news-items .news-item p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*文本溢出显示省略号*/
+    white-space: nowrap;
+    /*文本不会换行（单行文本溢出）*/
+    padding: 0;
+    margin: 0;
+    height: 18px;
+    line-height: 18px;
+    margin: 10px 0 10px 15px;
+}
+
+/**
+*   日期样式
+*/
+
+.item-dateblock {
+    height: 25px;
+    line-height: 25px;
+}
+
+.item-dateblock .item-date {
+    font-size: 16px;
+    color: #bfbfbf;
+}
+
+.item-dateblock .isnews {
+    margin-left: 15px;
+}
+
+.item-dateblock .item-date i {
+    margin-right: 5px;
+}
+
+/**
+*   按钮样式 
+*   class: btn-block more-btn
+*/
+.btn-block {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    visibility: hidden;
+}
+
+.btn-block .more-btn:hover {
+    background-color: #11a5eb;
+    transition: all 0.8s;
+    color: white;
+}
+
+.btn-block .more-btn {
+    box-sizing: border-box;
+    transition: all 0.8s;
+    color: #11a5eb;
+    width: 180px;
+    height: 60px;
+    border: #11a5eb 1.5px solid;
+    padding: 12px 42px;
+    font-size: 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/**
+* 微视频版块
+*/
+.main-videos {
+    height: 520px;
+}
+
+.main-videos .main-videos-containter {
+    width: 1200px;
+    margin: 0 auto;
+    height: 520px;
+}
+
+.main-videos-containter .video-title {
+    width: 1200px;
+    height: 136px;
+    text-align: center;
+    padding-top: 30px;
+    visibility: hidden;
+}
+
+.main-videos-containter hr {
+    margin: 0;
+}
+
+.video-title div {
+    color: #11a5eb;
+    display: inline-block;
+    font-size: 40px;
+}
+
+.video-title span {
+    font-size: 26px;
+    color: #a9a9a9;
+}
+
+.video-title p {
+    color: #a9a9a9;
+}
+
+.video-items {
+    width: 1200px;
+    height: 270px;
+}
+
+.video-items .video-item {
+    visibility: hidden;
+    width: 274px;
+    height: 200px;
+    float: left;
+    margin: 40px 34px 0 0;
+}
+
+.video-items .video-item:nth-of-type(4) {
+    margin-right: 0px;
+}
+
+/**
+*  视频版块鼠标悬停特效
+*/
+.video-items .video-item .video-cover {
+    width: 274px;
+    height: 154px;
+    position: absolute;
+    z-index: 22;
+}
+
+.video-items .video-item .video-cover span {
+    display: block;
+    position: absolute;
+    z-index: 22;
+    width: 274px;
+    height: 154px;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+}
+
+.video-items .video-item a:hover .video-cover span {
+    background: rgba(50, 50, 50, .6) url("../img/play.png");
+}
+
+/* 到此结束 */
+
+.video-items .video-item a {
+    width: 274px;
+    height: 154px;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.video-items .video-item .video-desc {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.video-items .video-item:hover div {
+    color: #11a5eb;
+}
+
+.video-items .video-item .video-item-title {
+    width: 274px;
+    height: 46px;
+    padding-left: 7px;
+}
+
+
+.video-item-title .item-dateblock .item-dateIcon {
+    margin-left: 0px;
+}
+
+/**
+*   关于我们版块
+*/
+.main-aboutus {
+    width: 1200px;
+    height: 560px;
+    margin: 0 auto;
+}
+
+.main-aboutus-title {
+    width: 1200px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.main-aboutus-title div {
+    font-size: 40px;
+    color: #11a5eb;
+    display: inline-block;
+}
+
+.main-aboutus-title span {
+    font-size: 26px;
+    color: #a9a9a9;
+}
+
+.main-aboutus-title p {
+    color: #a9a9a9;
+}
+
+.main-aboutus hr {
+    margin: 0 0 40px 0;
+}
+
+.aboutus-block {
+    width: 1200px;
+    height: 338px;
+    margin: 0 auto;
+}
+
+.aboutus-block .aboutus-left,
+.aboutus-block .aboutus-right,
+.aboutus-left .aboutus-img-scale {
+    width: 600px;
+    height: 338px;
+    float: left;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aboutus-left {
+    visibility: hidden;
+}
+
+.aboutus-left .aboutus-img-scale {
+    overflow: hidden;
+}
+
+.aboutus-left img {
+    width: 600px;
+    height: 338px;
+    transition: all 0.8s;
+    border: none;
+}
+
+.aboutus-left:hover img {
+    transform: scale(1.2);
+    transition: all 0.8s;
+}
+
+.aboutus-right-text {
+    visibility: hidden;
+    padding: 30px 20px 0 30px;
+}
+
+.aboutus-right-text h5 {
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.aboutus-right-text p {
+    padding: 0;
+    margin: 0;
+    width: 550px;
+    line-height: 24px;
+    font-size: 16px;
+    height: 96px;
+    text-indent: 2em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    text-overflow: ellipsis;
+}
+
+.aboutus-right .btn-block {
+    margin-top: 30px;
+}
+
+/**
+*   以下部分为css3动画
+*/
+
+
+/**
+*   hr线条出现过渡动画
+*/
+@-webkit-keyframes lineInLeft {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 1200px;
+    }
+}
+
+@keyframes lineInLeft {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 1200px;
+    }
+}
+
+.lineInLeft {
+    -webkit-animation-name: lineInLeft;
+    animation-name: lineInLeft;
+    animation-duration: 1.5s;
+}
+
+
+/**
+* 新闻版块动画
+* 从左边往右淡入效果，第一个元素，-100px
+*/
+@-webkit-keyframes fadeInLeft01 {
+    from {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-100px, 0, 0);
+        transform: translate3d(-100px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft01 {
+    from {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-100px, 0, 0);
+        transform: translate3d(-100px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInLeft01 {
+    -webkit-animation-name: fadeInLeft01;
+    animation-name: fadeInLeft01;
+    animation-duration: 1s;
+}
+
+/**
+  从左边往右淡入效果，第二个元素，-500px
+*/
+@-webkit-keyframes fadeInLeft02 {
+    from {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-500px, 0, 0);
+        transform: translate3d(-500px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft02 {
+    from {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-500px, 0, 0);
+        transform: translate3d(-500px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInLeft02 {
+    -webkit-animation-name: fadeInLeft02;
+    animation-name: fadeInLeft02;
+    animation-duration: 1s;
+}
+
+/**
+  从左边往右淡入效果，第三个元素，-800px
+*/
+@-webkit-keyframes fadeInLeft03 {
+    from {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-800px, 0, 0);
+        transform: translate3d(-800px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft03 {
+    from {
+        opacity: 0.5;
+        -webkit-transform: translate3d(-800px, 0, 0);
+        transform: translate3d(-800px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInLeft03 {
+    -webkit-animation-name: fadeInLeft03;
+    animation-name: fadeInLeft03;
+    animation-duration: 1s;
+}
+
+/**
+  从右边往左淡入效果，第一个元素，100px
+*/
+@-webkit-keyframes fadeInRight01 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100px, 0, 0);
+        transform: translate3d(100px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight01 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100px, 0, 0);
+        transform: translate3d(100px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInRight01 {
+    -webkit-animation-name: fadeInRight01;
+    animation-name: fadeInRight01;
+    animation-duration: 1s;
+}
+
+/**
+  从右边往左淡入效果，第二个元素，500px
+*/
+@-webkit-keyframes fadeInRight02 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(500px, 0, 0);
+        transform: translate3d(500px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight02 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(500px, 0, 0);
+        transform: translate3d(500px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInRight02 {
+    -webkit-animation-name: fadeInRight02;
+    animation-name: fadeInRight02;
+    animation-duration: 1s;
+}
+
+/**
+  从右边往左淡入效果，第三个元素，180px
+*/
+@-webkit-keyframes fadeInRight03 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(800px, 0, 0);
+        transform: translate3d(800px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight03 {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(800px, 0, 0);
+        transform: translate3d(800px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInRight03 {
+    -webkit-animation-name: fadeInRight03;
+    animation-name: fadeInRight03;
+    animation-duration: 1s;
+}
+
+/**
+    按钮过渡动画，由小放大
+  */
+@-webkit-keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    animation-duration: 1s;
+}
+
+/**
+  视频版块过渡动画
+*/
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100px, 0);
+        transform: translate3d(0, 100px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100px, 0);
+        transform: translate3d(0, 100px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation: fadeInUp 1s;
+}
+
+/* 过渡动画延迟0.1s */
+.fadeInUpDelay1 {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-delay: .1s;
+}
+
+/* 过渡动画延迟0.2s */
+.fadeInUpDelay2 {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-delay: .2s;
+}
+
+/* 过渡动画延迟0.3s */
+.fadeInUpDelay3 {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-delay: .3s;
+}
+
+/**
+  标题部分过渡动画
+*/
+@-webkit-keyframes bounceInLeft {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-500px, 0, 0);
+        transform: translate3d(-500px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes bounceInLeft {
+
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(-500px, 0, 0);
+        transform: translate3d(-500px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(25px, 0, 0);
+        transform: translate3d(25px, 0, 0);
+    }
+
+    75% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+    }
+
+    90% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(5px, 0, 0);
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.bounceInLeft {
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+    animation-duration: 1s;
+}
+
+/**
+*    从左往右淡出过渡动画,用于关于我们版块
+*/
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-200px, 0, 0);
+        transform: translate3d(-200px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-200px, 0, 0);
+        transform: translate3d(-200px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    animation-duration: 1s;
+}
+
+/*
+ * banner标题的出现动画  
+*/
+.title-animation {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+    animation-duration: 1.5s;
+}
+
+/**
+*   从右往左淡出过渡动画，用于关于我们版块
+*/
+
+@-webkit-keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(200px, 0, 0);
+        transform: translate3d(200px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(200px, 0, 0);
+        transform: translate3d(200px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+    animation-duration: 1s;
+}
